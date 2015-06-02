@@ -1,0 +1,32 @@
+/*
+Theme Name: SaleCycle
+Theme URI: https://www.salecycle.com
+Author: the SaleCyle Design team
+Author URI: https://www.salecycle.com
+Description: Simply put, this SaleCycle theme is proper mint.
+Version: 0.1
+License: Forever SaleCycles
+License URI: http://www.salecycle.com
+Tags: SaleCycle
+Text Domain: salecycle
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+@import "_reset.scss";
+@import "_grid.scss";
+@import "_vars.scss";
+@import "_mixins.scss";
+@import "_icons.scss";
+@import "_buttons.scss";
+@import "_styles.scss";
+@import "_guideline-page.scss";
+@import "_placeholder-page.scss";
+@import "_template-page.scss";
+@import "_linkwizard.scss";
+@import "_tutorials.scss";
+@import "_password.scss";
+
+span.hljs-deletion {
+    color: white;
+}

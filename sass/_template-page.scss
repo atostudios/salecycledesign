@@ -1,0 +1,108 @@
+//Guideline Page Styles
+
+
+//Guideline headers
+.template-page {
+			display:block;
+			background: #fff;
+			width:100%;
+			@include header(sunset, 400px, #fff);
+			section{
+				padding: 20px;
+			}
+			@include restrict-width(1000px);
+			h1{
+				padding: 22px 0px;
+			}
+}
+
+.front, .back {
+			width: 100%;
+			padding:10px;
+			height: 245px;
+			display: block;
+			text-align: center;
+			padding: 20px;
+			background: #fff;
+	  		-webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
+	  		box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);		  
+	  		@include rounded();
+			img{
+				 display: inline-block;
+				 margin: 0px auto;
+				 width: 115px;
+				 height: 140px;
+				 @include rounded();
+			}
+			h1{
+				font-size: 18px;
+				padding: 20px 0px 10px;
+				color: $grey;
+			}
+			p{
+				color: $grey;
+			}
+ 
+}
+
+.box {
+position:relative;
+height: 245px;
+margin: 1em;
+cursor: pointer;
+}
+
+.front, .back {
+position:absolute;
+} 
+
+.front {
+	top: 0;
+	z-index: 900;
+	text-align: center;
+	-webkit-transform: rotateX(0deg) rotateY(0deg);
+	-moz-transform: rotateX(0deg) rotateY(0deg);
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-webkit-transition: all .4s ease-in-out;
+	-moz-transition: all .4s ease-in-out;
+	-ms-transition: all .4s ease-in-out;
+	-o-transition: all .4s ease-in-out;
+	transition: all .4s ease-in-out;
+}
+
+.back {
+	z-index: 2;
+	z-index: 1000;
+	-webkit-transform: rotateY(-180deg);
+	-moz-transform: rotateY(-180deg);
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-webkit-transition: all .4s ease-in-out;
+	-moz-transition: all .4s ease-in-out;
+	-ms-transition: all .4s ease-in-out;
+	-o-transition: all .4s ease-in-out;
+	transition: all .4s ease-in-out;
+}
+
+.flip.box .front {
+	z-index: 900;
+	-webkit-transform: rotateY(180deg);
+	-moz-transform: rotateY(180deg);
+}
+
+.flip.box .back {
+	z-index: 1000;
+	-webkit-transform: rotateX(0deg) rotateY(0deg);
+	-moz-transform: rotateX(0deg) rotateY(0deg);
+}
+
+
+
+
+
+

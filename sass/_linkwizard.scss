@@ -1,0 +1,74 @@
+	
+.wrapper {
+	height:100%;
+}
+	.codeMirror {
+		span {color:white;}
+	}
+.code {
+	overflow:hidden;
+	position:relative;
+	height: calc(100% - 119px);
+
+	.CodeMirror-scroll {
+		background: $black !important;
+	}
+	.CodeMirror-gutters {
+		background:$lightgrey;
+		border:none;
+	}
+	.CodeMirror-linenumber {
+		color:white;
+		padding:0px 5px;
+	}
+
+	.cm-s-default .cm-tag {
+		color: $green;
+	}
+	.cm-s-default .cm-attribute {
+		color: $yellow;
+	}
+	.cm-s-default .cm-qualifier, .cm-s-default .cm-meta {
+		color: white;
+	}
+
+	.cm-property {
+		color: $blue;
+	}
+	.cm-s-default .cm-keyword {
+		color: $red;
+	}
+	.cm-s-default .cm-number {
+	 	color: $pink;
+	}
+	.cm-s-default .cm-atom {
+	 	color: $blue;
+	}
+
+	.cm-s-default .cm-string {
+	  	color: $blue;
+	}
+
+	.cm-s-default .cm-def {
+	  color: $pink;
+	}
+	.CodeMirror span {
+		color:white;
+}
+
+}
+
+.copied {
+  position: absolute;
+  top: 41%;
+  right: 0;
+  left: 0;
+  width: 50%;
+  margin: 0px auto;
+  background: #57c100;
+  color: white;
+  padding: 20px;
+  z-index: 9999;
+  text-align: center;
+  display:none;
+}

@@ -1,0 +1,64 @@
+//SaleCycle Corners
+	
+@mixin rounded{
+  border-radius: 7px;
+  -o-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -webkit-border-radius: 7px;
+}
+
+//Call to action setup
+	
+@mixin cta($cta-font-size, $cta-color) {
+	@include rounded;
+	display: inline-block;
+	padding: 10px 20px;
+	color: #fff;
+	font-size: $cta-font-size;
+	background: $cta-color;
+	text-decoration: none;
+	margin: 5px auto;
+	width:auto;
+	&:hover {
+		background: lighten($cta-color, 10%);
+	}
+}
+
+
+//Page headers
+
+
+@mixin header($header-photo, $header-height, $header-color ) {
+header{
+				background:url("imgs/#{$header-photo}.jpg") no-repeat;
+				background-size:cover;
+				//background: $darkgrey;
+				height:$header-height;
+				text-align:center;
+				h1{
+					padding-top: 180px;
+  					font-size: 55px;
+					color: $header-color;
+					text-align: center;
+					@media screen and (max-device-width: 768px), screen and (max-width: 768px) {
+						padding: 140px 60px 0px;
+					}
+				}
+				p{
+					color: $header-color;
+					margin: 10px 0px;
+					text-align: center;
+				}
+			}
+}
+
+//restrict content widths
+
+@mixin restrict-width($width) {
+	.content-width {
+		display: block;
+		max-width: $width;
+		margin: 0px auto;
+	}
+}

@@ -1,0 +1,39 @@
+//Guideline Page Styles
+
+
+//Guideline headers
+.guideline-page {
+			display:block;
+			background: #fff;
+			width:100%;
+			@include header(sky, 400px, #000);
+			section {
+				background: #fff;
+				padding: 20px;
+				img{
+					display: block;
+					width: 100%;
+					max-width: 1000px;
+					height: auto;
+					background: #fff;
+					margin: 10px 0px 10px;
+					@include rounded();
+				}
+				h1, h2, p{font-family: $font-normal; color: #000;}
+				h1{
+					font-size: 30px;
+					padding: 20px 0px;
+				}
+				h2{
+					font-size: 30px;
+					letter-spacing: -0.05em;
+					padding: 20px 0px;
+				}
+				p{
+					padding: 10px 0px;
+					line-height: 25px;
+				}
+				@include restrict-width(800px);
+			}
+}
+

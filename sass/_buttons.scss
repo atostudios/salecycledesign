@@ -1,0 +1,73 @@
+.button {
+	display:inline-block;
+	height:40px;
+	line-height:40px;
+	@include rounded();
+	text-align:left;
+	cursor:pointer;
+	width: 100%;
+	margin:5px 0px;
+	color: white;
+	padding-left:40px;
+	transition: all 0.4s ease;
+	&:hover {
+		color: white;
+		padding-left:50px;
+
+	}
+}
+
+.button.icon-html {
+	background: $yellow;
+	position:relative;
+	&:hover{
+		background: lighten($yellow, 15%);
+	}
+}
+
+.button.icon-psd {
+	background: $blue;
+	position:relative;
+	&:hover{
+		background: lighten($blue, 15%);
+	}
+}
+
+.button.icon-zip {
+	background: $grey;
+	position:relative;
+	&:hover{
+		background: lighten($grey, 15%);
+	}
+}
+
+.lwbutton {
+	color:white;
+	height: 100px;
+	line-height: 100px;
+	background: $blue;
+	text-align:center;
+	position:absolute;
+	bottom:0px;
+	z-index:9999;
+	width: 100%;
+	cursor:pointer;
+	font-size:30px;
+	transition: all 0.3s ease;
+	span {
+		font-size:22px;
+	}
+	&:hover {
+		background:lighten($blue, 20%);
+	}
+}
+
+.lwbutton.clone {
+	background: $pink;
+	&:hover {
+		background:lighten($pink, 20%);
+	}
+}
+
+
+.lwbutton.clone.zeroclipboard-is-hover { background:lighten($pink, 20%);cursor:pointer; }

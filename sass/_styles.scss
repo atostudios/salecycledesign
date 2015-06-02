@@ -1,0 +1,210 @@
+/* Sass Document */
+
+//Body Styling
+html{
+	height: 100%;
+}
+
+body {
+		background:#000;
+		font-family:$font-normal;
+		font-size:14px;
+		color:$grey;
+		height:100%;
+		h1,h2,h3,p,a{font-family:$font-normal;}	
+		h1{
+			font-size:25px;
+		}
+		h2  {
+			font-size:20px;
+		}	
+		h3 {
+			font-size:17px;
+		}
+		p{
+			font-size: 15px;
+		}
+		a{			
+			color: $blue;
+			transition: all 0.2s ease-in;
+			text-decoration:none;
+			&:hover{
+				color: $pink;
+			}
+		}
+	}
+	
+	
+	//transitions	
+	.logo, .navbar, .burger { transition: all 0.4s ease; }
+	
+	
+	//setting up the mini burger menu
+	
+		.burger {
+			display: none;
+		}
+		
+		@media screen and (max-device-width: 768px), screen and (max-width: 768px) {
+		.burger {
+  		  z-index: 99999;
+		  display: block;
+		  position: absolute;
+		  cursor: pointer;
+		  height: 35px;
+		  width: 50px;
+		  left: -60px;
+		  top: 8px;
+		  span{
+			  display: block;
+			  background: #fff;
+			  height: 4px;
+			  width: 40px;
+			  position: absolute;
+			  transition: all 0.5s ease;
+			  left:5px;
+			  &:nth-child(1){
+			  top: 5px;
+
+			  }
+			  &:nth-child(2){
+			  top: 15px;
+			  }
+			  &:nth-child(3){
+			  top: 25px;
+			  }
+		  }
+		}
+		}
+		.burger-close { left: 20px; background: none; }
+		.transparent { opacity: 0; }
+		.rotate-top { transform: rotatez(45deg); -webkit-transform-origin: 0%; transform-origin: 0%;  left: 6px !important;}
+		.rotate-bottom { transform: rotatez(-45deg); -webkit-transform-origin: 15%; transform-origin: 15%; top:29px!important;left: 3px; }
+	
+	//logo setup
+		.logo {
+			display: block;
+			position: absolute;
+			left: 10px;
+			top: 10px;
+			height: 40px;
+			text-indent: -9999px;
+			z-index: 9999;
+		}
+		
+		//main nav bar
+
+		.navbar {
+		display: block;
+		width: 100%;
+		background: #000;
+		text-align:center;
+		z-index: 9998;
+		position:relative;
+			@media screen and (max-device-width: 768px), screen and (max-width: 768px) {
+				position:fixed;
+				right:-250px;
+				height:100%;
+				width:250px;
+				&.nav-active{
+					right:0px;
+				}
+			}	
+		}
+	
+	
+		//nav list inside nav bar
+
+		.current-menu-item {
+			background-color: $pink;
+		}
+				
+		nav{
+			ul {
+			display:block;
+			background: #000;
+		    margin: 0;
+		    padding: 0;
+		    list-style: none;
+				 li{
+					display: inline-block;
+					margin: 0;
+					margin-right: -3px;
+					@media screen and (max-device-width: 768px), screen and (max-width: 768px) {
+							display:block;
+							width:100%;
+							border-bottom:1px $darkgrey solid;
+						}
+					a{
+						display: inline-block;
+						padding: 22px 20px;
+						color:#fff;
+						&:hover{	
+							background-color: $pink;
+							color:#fff;
+						}
+						&.selected{	
+							background-color: $pink;
+							color:#fff;
+						}
+						@media screen and (max-device-width: 768px), screen and (max-width: 768px) {
+							display:block;
+							width:100%;
+						}
+					}
+				 }
+  			}		
+		}
+		
+
+	
+	//Sections
+	
+		.home-content{
+			display:block;
+			width:100%;
+			@include header(night-stars, 400px, #fff);
+			section{
+				background: #fff;
+				&:nth-child(odd){
+					background: #fafafa;
+				}
+				a{	
+				display: block;
+				width: 100%;
+				text-align: center;
+				padding: 20px;
+				color: $darkgrey;
+				transition: all 0.4s ease;
+				&:hover{
+					background: $pink;
+					color: #fff;
+				}
+				img{
+					display: block;
+					height: 100px;
+					width: 100%;
+				}
+				h1, p, a{
+					margin: 10px 0px;
+				}
+				}
+			}
+		}
+		
+			//footer
+			
+			footer {
+				display:block;
+				width:100%;
+				text-align: center;
+				height: auto;
+				color: #fff;
+				padding: 20px;
+				  background: #000;
+			}
+			
+.wrapper {
+	position: relative;
+}
+

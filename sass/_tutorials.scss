@@ -1,0 +1,58 @@
+
+.single-tutorial {
+	h1 {color:white !important;}
+}
+.tutorials {
+	background:white;
+	padding-bottom: 20px;
+	.tutorial-container {
+		max-width: 800px;
+		padding:40px 0px 0px 0px;
+		margin:0px auto;
+	}
+	input {
+		width:calc(100% - 100px);
+		height:40px;
+		padding:0px 0px 0px 20px;
+		border: none;
+		background: lighten($grey, 50%);
+		color:$black;
+		float:left;
+		outline:none;
+		transition: all 0.3s ease;
+		margin: 0px 0px 20px 0px;
+		&:focus {
+			background: lighten($grey, 55%);
+		}
+	}
+	.search-btn {
+		padding: 0px !Important;
+		width: 100px;
+		float:left;
+		height: 40px;
+		background: $blue;
+		color:white;
+		line-height:40px;
+		text-align:center;
+		cursor: pointer;
+		transition: all 0.4s ease;
+		&:hover {
+			background: lighten($blue, 20%);
+		}
+	}
+	a {
+		color: $black;
+		height: 200px;
+		padding:20px;
+		cursor:pointer;
+		transition: all 0.4s ease;
+		&:nth-child(even){
+			background: #fafafa;
+		}
+		&:hover {
+			background: $blue;
+			color: white;
+		}
+	}
+
+}
