@@ -1403,7 +1403,102 @@ footer {
   background: #55d1ff;
 }
 
-/* line 30, sass/style.scss */
+/* line 3, sass/_lwyd.scss */
+.lwyd-box {
+  display: block;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  height: 0;
+  position: fixed;
+}
+/* line 9, sass/_lwyd.scss */
+.lwyd-box img {
+  display: block;
+  position: absolute;
+}
+
+/* line 19, sass/_lwyd.scss */
+.lwyd-box-active {
+  opacity: 1;
+  display: block;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 999;
+}
+/* line 27, sass/_lwyd.scss */
+.lwyd-box-active img {
+  transition: all 1s ease;
+  top: 10% !important;
+  max-height: 80% !important;
+  left: 0px !important;
+  right: 0px;
+  margin: 0px auto !important;
+}
+
+/* line 39, sass/_lwyd.scss */
+.lwyd-container {
+  display: inline-block;
+  -webkit-column-count: 3;
+  -moz-column-count: 3;
+  column-count: 3;
+  -webkit-column-gap: 0px;
+  -moz-column-gap: 0px;
+  column-gap: 0px;
+  transition: all 0.4s ease;
+  overflow: hidden;
+}
+/* line 49, sass/_lwyd.scss */
+.lwyd-container section {
+  display: block;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  position: relative;
+  cursor: pointer;
+  margin-top: -2px;
+}
+/* line 57, sass/_lwyd.scss */
+.lwyd-container section iframe {
+  margin: 0px;
+  padding: 0px;
+  width: 200%;
+  height: 700px;
+  -moz-transform: scale(0.5, 0.5);
+  -webkit-transform: scale(0.5, 0.5);
+  -o-transform: scale(0.5, 0.5);
+  -ms-transform: scale(0.5, 0.5);
+  transform: scale(0.5, 0.5);
+  -moz-transform-origin: top left;
+  -webkit-transform-origin: top left;
+  -o-transform-origin: top left;
+  -ms-transform-origin: top left;
+  transform-origin: top left;
+}
+/* line 74, sass/_lwyd.scss */
+.lwyd-container section img {
+  width: 100%;
+  height: auto;
+}
+/* line 79, sass/_lwyd.scss */
+.lwyd-container section p {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  padding: 20px;
+  color: white;
+  background: rgba(0, 0, 0, 0.8);
+  border-bottom: 1px solid #00adee;
+  text-align: center;
+  opacity: 0;
+  display: inline-block;
+}
+/* line 92, sass/_lwyd.scss */
+.lwyd-container section:hover p {
+  opacity: 1;
+}
+
+/* line 31, sass/style.scss */
 span.hljs-deletion {
   color: white;
 }

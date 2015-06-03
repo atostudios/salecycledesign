@@ -50,22 +50,6 @@ var hotel = $('hotel');
 var airline = $('airline');
 var travelagent = $('travelagent');
 
-// if (standard.val() === 'standard') {
-//   $('tr').css('display', 'none');
-//   $('tr.standardplaceholder').css('display', 'block');
-// } else if (travel.val() === 'travel') {
-//   $('tr').css('display', 'none');
-//   $('tr.travel').css('display', 'block');
-// } else if (hotel.val() === 'hotel') {
-//   $('tr').css('display', 'none');
-//   $('tr.hotel').css('display', 'block');
-// } else if (airline.val() === 'airline') {
-//   $('tr').css('display', 'none');
-//   $('tr.airline').css('display', 'block');
-// } else if (travelagent.val() === 'travelagent') {
-//   $('tr').css('display', 'none');
-//   $('tr.travelagent').css('display', 'block');
-// }
 
 $("input:radio[name=option]").click(function(){
 
@@ -75,6 +59,24 @@ $("input:radio[name=option]").click(function(){
   $(value).css('display', 'table');
 
 });
+
+$(".lwyd-container section img").click( function(event) {
+
+
+ img = $(this).attr('src');
+ $(".lwyd-box img").attr('src', img);
+
+$(".lwyd-box").addClass("lwyd-box-active");
+
+
+} );
+
+$(".lwyd-box").click(function() {
+
+  $(".lwyd-box").removeClass("lwyd-box-active");
+  // $(".lwyd-box img").css('height', '0');
+
+})
 
 
 
