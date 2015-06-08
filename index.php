@@ -1,12 +1,34 @@
 <?php get_header(); ?>
-<!-- Wrap Content -->
+
 	<div class="home-content large-12">
-		
+<?php $args = array(
+
+    'post_type' => array('homepage')
+
+    );
+
+
+
+$query = new WP_Query( $args );
+
+?>
+<?php if ( have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
+
 		<header class="large-12">
-			<h1>SaleCycle Design Guidelines</h1>
-			<p>Not all those who wander are lost.</p>
+		<video autoplay  poster="<?php the_field('fallback') ?>" id="bgvid" loop>
+<source src="<?php the_field('webm') ?>" type="video/webm">
+<source src="<?php the_field('mp4') ?>" type="video/mp4">
+</video>
+			<h1><?php the_field('headline') ?></h1>
+			<p><?php the_field('tagline') ?></p>
 			<!--<a href="#">Download PDF</a>-->
 		</header>
+
+		<?php endwhile; else: ?>
+	</div>
+	<p>No show</p>
+
+<?php endif; ?>
 
 
     <?php 

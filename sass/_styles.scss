@@ -116,10 +116,14 @@ body {
 		//nav list inside nav bar
 
 		.current-menu-item {
-			background-color: $pink;
+			background-color: #616E73;
 		}
 				
 		nav{
+			width: 100%;
+		@media screen and (max-device-width: 768px), screen and (max-width: 768px) {
+			position: absolute;
+		}
 			ul {
 			display:block;
 			background: #000;
@@ -159,11 +163,29 @@ body {
 
 	
 	//Sections
-	
+	#bgvid {
+		position: absolute;
+		top:0;
+		width: 100%;
+		z-index: 2;
+		left:0;
+	}
 		.home-content{
 			display:block;
 			width:100%;
 			@include header(night-stars, 400px, #fff);
+			header {
+				height:500px;
+				position: relative;
+				overflow:hidden;
+				h1 {
+					padding-top: 230px;
+				}
+				h1, p {
+					z-index: 3;
+					position: relative;
+				}
+			}
 			section{
 				background: #fff;
 				&:nth-child(odd){

@@ -56,3 +56,33 @@
 	}
 
 }
+
+//Parallax
+
+.single-tutorial .wrapper, .single-emr .wrapper, .single-osr .wrapper  {
+  -webkit-perspective: 1px;
+  perspective: 1px;
+  -moz-perspective: 1px;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective-origin-x: 100%;
+  position: absolute;
+}
+.parallax__layer {
+  position: relative;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform-origin-x: 100%;
+}
+.parallax__layer--base {
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+}
+.parallax__layer--back {
+       transform: translateZ(-1px) translateY(-333px) translateX(-9px) scale(2);
+       -moz-transform: translateZ(0) translateY(0) translateX(0) scale(1);
+
+}

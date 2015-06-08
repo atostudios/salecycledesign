@@ -14,7 +14,7 @@ function register_theme_menus() {
 }
 
 function code_mirror_css(){
-if(is_page('linkwizard')){
+if(is_page('Linkwizard')){
 	wp_enqueue_style('codemirrorcss', get_template_directory_uri() . '/js/cm/lib/codemirror.css');
 	}
 }
@@ -63,7 +63,7 @@ add_filter('upload_mimes', 'cc_mime_types');
 
 
 function code_mirror_js(){
-if(is_page('linkwizard')){
+if(is_page('Linkwizard')){
 	wp_enqueue_script('zeroclipboard', get_template_directory_uri() . '/js/ZeroClipboard.js','jquery', true );
 	wp_enqueue_script('codemirror', get_template_directory_uri() . '/js/cm/lib/codemirror.js');
 	wp_enqueue_script('css', get_template_directory_uri() . '/js/cm/mode/css/css.js', '', true );

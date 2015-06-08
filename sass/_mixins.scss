@@ -31,7 +31,7 @@
 
 @mixin header($header-photo, $header-height, $header-color ) {
 header{
-				background:url("imgs/#{$header-photo}.jpg") no-repeat;
+				
 				background-size:cover;
 				//background: $darkgrey;
 				height:$header-height;

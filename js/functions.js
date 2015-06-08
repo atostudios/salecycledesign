@@ -82,4 +82,3 @@ $(".lwyd-box").click(function() {
 
 
 })
-

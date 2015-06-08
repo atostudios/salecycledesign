@@ -720,10 +720,20 @@ body a:hover {
 
 /* line 118, sass/_styles.scss */
 .current-menu-item {
-  background-color: #ed028b;
+  background-color: #616E73;
 }
 
-/* line 123, sass/_styles.scss */
+/* line 122, sass/_styles.scss */
+nav {
+  width: 100%;
+}
+@media screen and (max-device-width: 768px), screen and (max-width: 768px) {
+  /* line 122, sass/_styles.scss */
+  nav {
+    position: absolute;
+  }
+}
+/* line 127, sass/_styles.scss */
 nav ul {
   display: block;
   background: #000;
@@ -731,52 +741,60 @@ nav ul {
   padding: 0;
   list-style: none;
 }
-/* line 129, sass/_styles.scss */
+/* line 133, sass/_styles.scss */
 nav ul li {
   display: inline-block;
   margin: 0;
   margin-right: -3px;
 }
 @media screen and (max-device-width: 768px), screen and (max-width: 768px) {
-  /* line 129, sass/_styles.scss */
+  /* line 133, sass/_styles.scss */
   nav ul li {
     display: block;
     width: 100%;
     border-bottom: 1px #232b2e solid;
   }
 }
-/* line 138, sass/_styles.scss */
+/* line 142, sass/_styles.scss */
 nav ul li a {
   display: inline-block;
   padding: 22px 20px;
   color: #fff;
 }
-/* line 142, sass/_styles.scss */
+/* line 146, sass/_styles.scss */
 nav ul li a:hover {
   background-color: #ed028b;
   color: #fff;
 }
-/* line 146, sass/_styles.scss */
+/* line 150, sass/_styles.scss */
 nav ul li a.selected {
   background-color: #ed028b;
   color: #fff;
 }
 @media screen and (max-device-width: 768px), screen and (max-width: 768px) {
-  /* line 138, sass/_styles.scss */
+  /* line 142, sass/_styles.scss */
   nav ul li a {
     display: block;
     width: 100%;
   }
 }
 
-/* line 163, sass/_styles.scss */
+/* line 166, sass/_styles.scss */
+#bgvid {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+  left: 0;
+}
+
+/* line 173, sass/_styles.scss */
 .home-content {
   display: block;
   width: 100%;
 }
 /* line 33, sass/_mixins.scss */
 .home-content header {
-  background: url("imgs/night-stars.jpg") no-repeat;
   background-size: cover;
   height: 400px;
   text-align: center;
@@ -800,15 +818,30 @@ nav ul li a.selected {
   margin: 10px 0px;
   text-align: center;
 }
-/* line 167, sass/_styles.scss */
+/* line 177, sass/_styles.scss */
+.home-content header {
+  height: 500px;
+  position: relative;
+  overflow: hidden;
+}
+/* line 181, sass/_styles.scss */
+.home-content header h1 {
+  padding-top: 230px;
+}
+/* line 184, sass/_styles.scss */
+.home-content header h1, .home-content header p {
+  z-index: 3;
+  position: relative;
+}
+/* line 189, sass/_styles.scss */
 .home-content section {
   background: #fff;
 }
-/* line 169, sass/_styles.scss */
+/* line 191, sass/_styles.scss */
 .home-content section:nth-child(odd) {
   background: #fafafa;
 }
-/* line 172, sass/_styles.scss */
+/* line 194, sass/_styles.scss */
 .home-content section a {
   display: block;
   width: 100%;
@@ -817,23 +850,23 @@ nav ul li a.selected {
   color: #232b2e;
   transition: all 0.4s ease;
 }
-/* line 179, sass/_styles.scss */
+/* line 201, sass/_styles.scss */
 .home-content section a:hover {
   background: #ed028b;
   color: #fff;
 }
-/* line 183, sass/_styles.scss */
+/* line 205, sass/_styles.scss */
 .home-content section a img {
   display: block;
   height: 100px;
   width: 100%;
 }
-/* line 188, sass/_styles.scss */
+/* line 210, sass/_styles.scss */
 .home-content section a h1, .home-content section a p, .home-content section a a {
   margin: 10px 0px;
 }
 
-/* line 197, sass/_styles.scss */
+/* line 219, sass/_styles.scss */
 footer {
   display: block;
   width: 100%;
@@ -844,7 +877,7 @@ footer {
   background: #000;
 }
 
-/* line 207, sass/_styles.scss */
+/* line 229, sass/_styles.scss */
 .wrapper {
   position: relative;
 }
@@ -857,7 +890,6 @@ footer {
 }
 /* line 33, sass/_mixins.scss */
 .guideline-page header {
-  background: url("imgs/sky.jpg") no-repeat;
   background-size: cover;
   height: 400px;
   text-align: center;
@@ -936,7 +968,6 @@ footer {
 }
 /* line 33, sass/_mixins.scss */
 .placeholder-page header {
-  background: url("imgs/sea.jpg") no-repeat;
   background-size: cover;
   height: 400px;
   text-align: center;
@@ -993,7 +1024,7 @@ footer {
 }
 /* line 37, sass/_placeholder-page.scss */
 .placeholder-table .standard {
-  display: table;
+  display: table !important;
 }
 /* line 41, sass/_placeholder-page.scss */
 .placeholder-table td, .placeholder-table th {
@@ -1030,7 +1061,6 @@ footer {
 }
 /* line 33, sass/_mixins.scss */
 .template-page header {
-  background: url("imgs/sunset.jpg") no-repeat;
   background-size: cover;
   height: 400px;
   text-align: center;
@@ -1324,6 +1354,40 @@ footer {
 .tutorials a:hover {
   background: #00adee;
   color: white;
+}
+
+/* line 62, sass/_tutorials.scss */
+.single-tutorial .wrapper, .single-emr .wrapper, .single-osr .wrapper {
+  -webkit-perspective: 1px;
+  perspective: 1px;
+  -moz-perspective: 1px;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective-origin-x: 100%;
+  position: absolute;
+}
+
+/* line 72, sass/_tutorials.scss */
+.parallax__layer {
+  position: relative;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform-origin-x: 100%;
+}
+
+/* line 80, sass/_tutorials.scss */
+.parallax__layer--base {
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
+/* line 84, sass/_tutorials.scss */
+.parallax__layer--back {
+  transform: translateZ(-1px) translateY(-333px) translateX(-9px) scale(2);
+  -moz-transform: translateZ(0) translateY(0) translateX(0) scale(1);
 }
 
 /* line 1, sass/_password.scss */

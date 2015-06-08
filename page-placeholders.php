@@ -17,7 +17,7 @@ get_header(); ?>
 		<div class="content-width">
 
 <div class="placeholder-filter">
-	<input type="radio" name="option" id="standard" value="standardplaceholder" checked="checked" /><span>Standard</span>
+	<input type="radio" name="option" id="standard" value="standard" checked="checked" /><span>Standard</span>
 	<input type="radio" name="option" id="travel" value="travel" /><span>Travel</span>
 	<input type="radio" name="option" id="hotel" value="hotel" /><span>Hotel</span>
 	<input type="radio" name="option" id="airline" value="airline" /><span>Airline</span>
