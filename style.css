@@ -898,7 +898,7 @@ footer {
 .guideline-page header h1 {
   padding-top: 180px;
   font-size: 55px;
-  color: black;
+  color: white;
   text-align: center;
 }
 @media screen and (max-device-width: 768px), screen and (max-width: 768px) {
@@ -909,7 +909,7 @@ footer {
 }
 /* line 48, sass/_mixins.scss */
 .guideline-page header p {
-  color: black;
+  color: white;
   margin: 10px 0px;
   text-align: center;
 }
@@ -1386,7 +1386,7 @@ footer {
 
 /* line 84, sass/_tutorials.scss */
 .parallax__layer--back {
-  transform: translateZ(-1px) translateY(-333px) translateX(-9px) scale(2);
+  transform: translateZ(-1px) translateY(-368px) translateX(-9px) scale(2);
   -moz-transform: translateZ(0) translateY(0) translateX(0) scale(1);
 }
 

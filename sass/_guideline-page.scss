@@ -6,7 +6,7 @@
 			display:block;
 			background: #fff;
 			width:100%;
-			@include header(sky, 400px, #000);
+			@include header(sky, 400px, white);
 			section {
 				background: #fff;
 				padding: 20px;
