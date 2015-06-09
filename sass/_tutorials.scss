@@ -82,7 +82,6 @@
           transform: translateZ(0);
 }
 .parallax__layer--back {
-     	transform: translateZ(-1px) translateY(-368px) translateX(-9px) scale(2);
+     	transform: translateZ(-1px) translateY(-368px) translateX(0px) scale(2);
        -moz-transform: translateZ(0) translateY(0) translateX(0) scale(1);
-
 }
