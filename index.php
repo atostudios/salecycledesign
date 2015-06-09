@@ -85,6 +85,5 @@ $query = new WP_Query( $args );
 			<p>Find all of the resources you need to make bulletproof emails.</p>
 		</a>
 	</section>
-	<div>Hello </div>
 	
 <?php get_footer(); ?>
