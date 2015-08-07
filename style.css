@@ -1293,18 +1293,64 @@ footer {
   color: white !important;
 }
 
-/* line 5, sass/_tutorials.scss */
+/* line 6, sass/_tutorials.scss */
 .tutorials {
   background: white;
-  padding-bottom: 20px;
+  padding: 40px 0px 40px;
 }
-/* line 8, sass/_tutorials.scss */
-.tutorials .tutorial-container {
-  max-width: 800px;
-  padding: 40px 0px 0px 0px;
-  margin: 0px auto;
+@media only screen and (max-width: 480px) {
+  /* line 6, sass/_tutorials.scss */
+  .tutorials {
+    padding: 40px 0px 40px;
+  }
 }
-/* line 13, sass/_tutorials.scss */
+/* line 12, sass/_tutorials.scss */
+.tutorials .tutorials-header {
+  padding: 15px;
+}
+/* line 14, sass/_tutorials.scss */
+.tutorials .tutorials-header h1 {
+  font-family: "whitneybook", sans-serif;
+  color: #000;
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+/* line 20, sass/_tutorials.scss */
+.tutorials .tutorials-header p {
+  margin-bottom: 30px;
+}
+/* line 25, sass/_tutorials.scss */
+.tutorials .article h2 {
+  font-family: "whitneybook", sans-serif;
+  color: #000;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+/* line 31, sass/_tutorials.scss */
+.tutorials .article p {
+  margin-bottom: 10px;
+  color: #717171;
+}
+/* line 36, sass/_tutorials.scss */
+.tutorials .article:hover h2 {
+  color: #00adee;
+}
+/* line 39, sass/_tutorials.scss */
+.tutorials .article:hover p {
+  color: #00adee;
+}
+/* line 44, sass/_tutorials.scss */
+.tutorials .article-contain {
+  padding: 15px;
+}
+/* line 48, sass/_tutorials.scss */
+.tutorials img {
+  width: 100%;
+  height: 200px;
+  border-radius: 7px;
+  transition: all 0.5s ease-in;
+}
+/* line 54, sass/_tutorials.scss */
 .tutorials input {
   width: calc(100% - 100px);
   height: 40px;
@@ -1317,11 +1363,11 @@ footer {
   transition: all 0.3s ease;
   margin: 0px 0px 20px 0px;
 }
-/* line 24, sass/_tutorials.scss */
+/* line 65, sass/_tutorials.scss */
 .tutorials input:focus {
   background: #f6f7f7;
 }
-/* line 28, sass/_tutorials.scss */
+/* line 69, sass/_tutorials.scss */
 .tutorials .search-btn {
   padding: 0px !Important;
   width: 100px;
@@ -1334,30 +1380,12 @@ footer {
   cursor: pointer;
   transition: all 0.4s ease;
 }
-/* line 39, sass/_tutorials.scss */
+/* line 80, sass/_tutorials.scss */
 .tutorials .search-btn:hover {
   background: #55d1ff;
 }
-/* line 43, sass/_tutorials.scss */
-.tutorials a {
-  color: #1a1d1f;
-  height: 200px;
-  padding: 20px;
-  cursor: pointer;
-  transition: all 0.4s ease;
-}
-/* line 49, sass/_tutorials.scss */
-.tutorials a:nth-child(even) {
-  background: #fafafa;
-}
-/* line 52, sass/_tutorials.scss */
-.tutorials a:hover {
-  background: #00adee;
-  color: white;
-}
 
-/* line 62, sass/_tutorials.scss */
-.single-tutorial .wrapper, .single-emr .wrapper, .single-osr .wrapper {
+/* .single-tutorial .wrapper, .single-emr .wrapper, .single-osr .wrapper  {
   -webkit-perspective: 1px;
   perspective: 1px;
   -moz-perspective: 1px;
@@ -1367,8 +1395,6 @@ footer {
   perspective-origin-x: 100%;
   position: absolute;
 }
-
-/* line 72, sass/_tutorials.scss */
 .parallax__layer {
   position: relative;
   top: 0;
@@ -1377,19 +1403,14 @@ footer {
   left: 0;
   transform-origin-x: 100%;
 }
-
-/* line 80, sass/_tutorials.scss */
 .parallax__layer--base {
   -webkit-transform: translateZ(0);
-  transform: translateZ(0);
+          transform: translateZ(0);
 }
-
-/* line 84, sass/_tutorials.scss */
 .parallax__layer--back {
-  transform: translateZ(-1px) translateY(-368px) translateX(0px) scale(2);
-  -moz-transform: translateZ(0) translateY(0) translateX(0) scale(1);
-}
-
+     	transform: translateZ(-1px) translateY(-368px) translateX(0px) scale(2);
+       -moz-transform: translateZ(0) translateY(0) translateX(0) scale(1);
+} */
 /* line 1, sass/_password.scss */
 .pw-overlay {
   position: absolute;
@@ -1562,7 +1583,335 @@ footer {
   opacity: 1;
 }
 
-/* line 31, sass/style.scss */
+/* line 1, sass/_tilteffect.scss */
+.grid_img {
+  height: 250px;
+  border-radius: 0px;
+}
+
+/* line 6, sass/_tilteffect.scss */
+.tilt {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  border-radius: 0px;
+}
+
+/* line 16, sass/_tilteffect.scss */
+.tilt__back,
+.tilt__front {
+  width: 100%;
+  height: 100%;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 0px;
+}
+
+/* line 27, sass/_tilteffect.scss */
+.tilt__back {
+  position: relative;
+  border-radius: 0px;
+}
+
+/* line 33, sass/_tilteffect.scss */
+.tilt__front {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 0px;
+}
+
+/* line 1, sass/_flex-grid.scss */
+.Grid {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 9, sass/_flex-grid.scss */
+.Grid-cell {
+  flex: 1;
+}
+
+/* line 13, sass/_flex-grid.scss */
+.Grid--flexCells > .Grid-cell {
+  display: flex;
+}
+
+/* line 17, sass/_flex-grid.scss */
+.Grid--top {
+  align-items: flex-start;
+}
+
+/* line 21, sass/_flex-grid.scss */
+.Grid--bottom {
+  align-items: flex-end;
+}
+
+/* line 25, sass/_flex-grid.scss */
+.Grid--center {
+  align-items: center;
+}
+
+/* line 29, sass/_flex-grid.scss */
+.Grid--justifyCenter {
+  justify-content: center;
+}
+
+/* line 33, sass/_flex-grid.scss */
+.Grid-cell--top {
+  align-self: flex-start;
+}
+
+/* line 37, sass/_flex-grid.scss */
+.Grid-cell--bottom {
+  align-self: flex-end;
+}
+
+/* line 41, sass/_flex-grid.scss */
+.Grid-cell--center {
+  align-self: center;
+}
+
+/* line 45, sass/_flex-grid.scss */
+.Grid-cell--autoSize {
+  flex: none;
+}
+
+/* line 49, sass/_flex-grid.scss */
+.Grid--fit > .Grid-cell {
+  flex: 1;
+}
+
+/* line 53, sass/_flex-grid.scss */
+.Grid--full > .Grid-cell {
+  flex: 0 0 100%;
+}
+
+/* line 57, sass/_flex-grid.scss */
+.Grid--1of2 > .Grid-cell {
+  flex: 0 0 50%;
+}
+
+/* line 61, sass/_flex-grid.scss */
+.Grid--1of3 > .Grid-cell {
+  flex: 0 0 33.3333%;
+}
+
+/* line 65, sass/_flex-grid.scss */
+.Grid--1of4 > .Grid-cell {
+  flex: 0 0 25%;
+}
+
+@media (break-sm) {
+  /* line 70, sass/_flex-grid.scss */
+  .small-Grid--fit > .Grid-cell {
+    flex: 1;
+  }
+
+  /* line 73, sass/_flex-grid.scss */
+  .small-Grid--full > .Grid-cell {
+    flex: 0 0 100%;
+  }
+
+  /* line 76, sass/_flex-grid.scss */
+  .small-Grid--1of2 > .Grid-cell {
+    flex: 0 0 50%;
+  }
+
+  /* line 79, sass/_flex-grid.scss */
+  .small-Grid--1of3 > .Grid-cell {
+    flex: 0 0 33.3333%;
+  }
+
+  /* line 82, sass/_flex-grid.scss */
+  .small-Grid--1of4 > .Grid-cell {
+    flex: 0 0 25%;
+  }
+}
+@media (-(-break-md)) {
+  /* line 88, sass/_flex-grid.scss */
+  .med-Grid--fit > .Grid-cell {
+    flex: 1;
+  }
+
+  /* line 91, sass/_flex-grid.scss */
+  .med-Grid--full > .Grid-cell {
+    flex: 0 0 100%;
+  }
+
+  /* line 94, sass/_flex-grid.scss */
+  .med-Grid--1of2 > .Grid-cell {
+    flex: 0 0 50%;
+  }
+
+  /* line 97, sass/_flex-grid.scss */
+  .med-Grid--1of3 > .Grid-cell {
+    flex: 0 0 33.3333%;
+  }
+
+  /* line 100, sass/_flex-grid.scss */
+  .med-Grid--1of4 > .Grid-cell {
+    flex: 0 0 25%;
+  }
+}
+@media (-(-break-lg)) {
+  /* line 106, sass/_flex-grid.scss */
+  .large-Grid--fit > .Grid-cell {
+    flex: 1;
+  }
+
+  /* line 109, sass/_flex-grid.scss */
+  .large-Grid--full > .Grid-cell {
+    flex: 0 0 100%;
+  }
+
+  /* line 112, sass/_flex-grid.scss */
+  .large-Grid--1of2 > .Grid-cell {
+    flex: 0 0 50%;
+  }
+
+  /* line 115, sass/_flex-grid.scss */
+  .large-Grid--1of3 > .Grid-cell {
+    flex: 0 0 33.3333%;
+  }
+
+  /* line 118, sass/_flex-grid.scss */
+  .large-Grid--1of4 > .Grid-cell {
+    flex: 0 0 25%;
+  }
+}
+/* line 123, sass/_flex-grid.scss */
+.Grid--gutters {
+  margin: -1em 0 1em -1em;
+}
+
+/* line 126, sass/_flex-grid.scss */
+.Grid--gutters > .Grid-cell {
+  padding: 1em 0 0 1em;
+}
+
+/* line 130, sass/_flex-grid.scss */
+.Grid--guttersLg {
+  margin: -1.5em 0 1.5em -1.5em;
+}
+
+/* line 133, sass/_flex-grid.scss */
+.Grid--guttersLg > .Grid-cell {
+  padding: 1.5em 0 0 1.5em;
+}
+
+/* line 137, sass/_flex-grid.scss */
+.Grid--guttersXl {
+  margin: -2em 0 2em -2em;
+}
+
+/* line 140, sass/_flex-grid.scss */
+.Grid--guttersXl > .Grid-cell {
+  padding: 2em 0 0 2em;
+}
+
+@media (break-sm) {
+  /* line 145, sass/_flex-grid.scss */
+  .small-Grid--gutters {
+    margin: -1em 0 1em -1em;
+  }
+
+  /* line 148, sass/_flex-grid.scss */
+  .small-Grid--gutters > .Grid-cell {
+    padding: 1em 0 0 1em;
+  }
+
+  /* line 151, sass/_flex-grid.scss */
+  .small-Grid--guttersLg {
+    margin: -1.5em 0 1.5em -1.5em;
+  }
+
+  /* line 154, sass/_flex-grid.scss */
+  .small-Grid--guttersLg > .Grid-cell {
+    padding: 1.5em 0 0 1.5em;
+  }
+
+  /* line 157, sass/_flex-grid.scss */
+  .small-Grid--guttersXl {
+    margin: -2em 0 2em -2em;
+  }
+
+  /* line 160, sass/_flex-grid.scss */
+  .small-Grid--guttersXl > .Grid-cell {
+    padding: 2em 0 0 2em;
+  }
+}
+@media (-(-break-md)) {
+  /* line 166, sass/_flex-grid.scss */
+  .med-Grid--gutters {
+    margin: -1em 0 1em -1em;
+  }
+
+  /* line 169, sass/_flex-grid.scss */
+  .med-Grid--gutters > .Grid-cell {
+    padding: 1em 0 0 1em;
+  }
+
+  /* line 172, sass/_flex-grid.scss */
+  .med-Grid--guttersLg {
+    margin: -1.5em 0 1.5em -1.5em;
+  }
+
+  /* line 175, sass/_flex-grid.scss */
+  .med-Grid--guttersLg > .Grid-cell {
+    padding: 1.5em 0 0 1.5em;
+  }
+
+  /* line 178, sass/_flex-grid.scss */
+  .med-Grid--guttersXl {
+    margin: -2em 0 2em -2em;
+  }
+
+  /* line 181, sass/_flex-grid.scss */
+  .med-Grid--guttersXl > .Grid-cell {
+    padding: 2em 0 0 2em;
+  }
+}
+@media (-(-break-lg)) {
+  /* line 187, sass/_flex-grid.scss */
+  .large-Grid--gutters {
+    margin: -1em 0 1em -1em;
+  }
+
+  /* line 190, sass/_flex-grid.scss */
+  .large-Grid--gutters > .Grid-cell {
+    padding: 1em 0 0 1em;
+  }
+
+  /* line 193, sass/_flex-grid.scss */
+  .large-Grid--guttersLg {
+    margin: -1.5em 0 1.5em -1.5em;
+  }
+
+  /* line 196, sass/_flex-grid.scss */
+  .large-Grid--guttersLg > .Grid-cell {
+    padding: 1.5em 0 0 1.5em;
+  }
+
+  /* line 199, sass/_flex-grid.scss */
+  .large-Grid--guttersXl {
+    margin: -2em 0 2em -2em;
+  }
+
+  /* line 202, sass/_flex-grid.scss */
+  .large-Grid--guttersXl > .Grid-cell {
+    padding: 2em 0 0 2em;
+  }
+}
+/* line 34, sass/style.scss */
 span.hljs-deletion {
   color: white;
 }

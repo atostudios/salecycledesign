@@ -1,0 +1,38 @@
+.grid_img {
+	height: 250px;
+	border-radius: $tilt-border;
+}
+
+.tilt {
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+	border-radius: $tilt-border;
+}
+
+.tilt__back,
+.tilt__front {
+	width: 100%;
+	height: 100%;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	border-radius: $tilt-border;
+}
+
+.tilt__back {
+	position: relative;
+	border-radius: $tilt-border;
+
+}
+
+.tilt__front {
+	position: absolute;
+	top: 0;
+	left: 0;
+	border-radius: $tilt-border;
+}

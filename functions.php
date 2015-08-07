@@ -25,8 +25,6 @@ add_action( 'init', 'register_theme_menus' );
 function wpa_theme_styles(){
 
 	wp_enqueue_style('main_css', get_template_directory_uri() . '/style.css');
-	
-
 
 }
 
@@ -35,7 +33,7 @@ add_action('wp_enqueue_scripts', 'wpa_theme_styles');
 function wpa_theme_js(){
 
 	 wp_enqueue_script('functions', get_template_directory_uri() . '/js/functions.js', array('jquery'), '', true );
-
+	 wp_enqueue_script('tiltfx', get_template_directory_uri() . '/js/libs/tiltfx.js', array('jquery'), '', true );
 
 } 
 

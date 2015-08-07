@@ -2,13 +2,54 @@
 .single-tutorial {
 	h1 {color:white !important;}
 }
+
 .tutorials {
 	background:white;
-	padding-bottom: 20px;
-	.tutorial-container {
-		max-width: 800px;
-		padding:40px 0px 0px 0px;
-		margin:0px auto;
+	padding: 40px 0px 40px;
+	@media only screen and (max-width: 480px) {
+		padding: 40px 0px 40px;
+	}
+	.tutorials-header {
+		padding: 15px;
+		h1{
+		font-family: "whitneybook", sans-serif;
+    	color: #000;
+    	font-size: 30px;
+    	margin-bottom: 15px;
+		}
+		p{
+			margin-bottom: 30px;
+		}
+	}
+	.article {
+		h2{
+			font-family: "whitneybook", sans-serif;
+	    	color: #000;
+	    	font-size: 22px;
+	    	margin-bottom: 10px;
+		}
+		p {
+			margin-bottom: 10px;
+			color: #717171;
+		}
+		&:hover{
+			h2 {
+				color: #00adee;
+			}
+			p {
+				color: #00adee;
+			}
+		}
+	}
+	.article-contain {
+		padding: 15px;
+	}
+	
+	img {
+		width: 100%;
+		height: 200px;
+		border-radius: 7px;
+		transition: all 0.5s ease-in;
 	}
 	input {
 		width:calc(100% - 100px);
@@ -40,26 +81,12 @@
 			background: lighten($blue, 20%);
 		}
 	}
-	a {
-		color: $black;
-		height: 200px;
-		padding:20px;
-		cursor:pointer;
-		transition: all 0.4s ease;
-		&:nth-child(even){
-			background: #fafafa;
-		}
-		&:hover {
-			background: $blue;
-			color: white;
-		}
-	}
 
 }
 
 //Parallax
 
-.single-tutorial .wrapper, .single-emr .wrapper, .single-osr .wrapper  {
+/* .single-tutorial .wrapper, .single-emr .wrapper, .single-osr .wrapper  {
   -webkit-perspective: 1px;
   perspective: 1px;
   -moz-perspective: 1px;
@@ -84,4 +111,4 @@
 .parallax__layer--back {
      	transform: translateZ(-1px) translateY(-368px) translateX(0px) scale(2);
        -moz-transform: translateZ(0) translateY(0) translateX(0) scale(1);
-}
+} */
